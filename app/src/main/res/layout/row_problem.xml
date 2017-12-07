@@ -13,7 +13,7 @@
         tools:background="#AAA" />
 <!-- todo -->
     <TextView
-        android:id="@+id/pseudo"
+        android:id="@+id/probleme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"
@@ -21,14 +21,14 @@
         android:layout_toRightOf="@+id/img_problem"
         android:layout_alignTop="@+id/img_problem"
         android:textStyle="bold"
-        tools:text="Pseudo" />
+        tools:text="Problème" />
 
-    <TextView android:id="@+id/text"
+    <TextView android:id="@+id/lieu"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:textColor="@android:color/black"
-              android:layout_alignLeft="@+id/pseudo"
-              android:layout_below="@+id/pseudo"
-              tools:text="Texte de mon tweet" />
+              android:layout_alignLeft="@+id/probleme"
+              android:layout_below="@+id/probleme"
+              tools:text="Lieu du problème" />
 
 </RelativeLayout>
