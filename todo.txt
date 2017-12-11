@@ -1,5 +1,5 @@
-- base de données sqlite avec orm
+DONE - base de données sqlite avec orm
 - activité d'ajout de problème
-- adapter pour le recycler view
+DOING - adapter pour le recycler view
 - map avec géolocalisation
 - activité de consultation des détails et de suppression d'un problème
