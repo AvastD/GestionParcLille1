@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">GestionParcLille1</string>
+    <string name="type_details1">Type</string>
+    <string name="titre_details2">Adresse :</string>
+    <string name="titre_details3">Détails</string>
 </resources>

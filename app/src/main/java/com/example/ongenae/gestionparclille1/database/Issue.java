@@ -1,5 +1,6 @@
 package com.example.ongenae.gestionparclille1.database;
 
+import com.example.ongenae.gestionparclille1.TypeEnum;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
@@ -19,15 +20,11 @@ public class Issue implements Serializable {
     public static final String ISSUE_ADRESSE = "adresse";
     public static final String ISSUE_DETAILS = "details";
 
-    public Issue() {
-
-    }
-
     @DatabaseField(columnName = ISSUE_ID, generatedId = true)
     private Integer mId;
 
     @DatabaseField(columnName = ISSUE_TYPE)
-    private String mType;
+    private TypeEnum mType;
 
     @DatabaseField(columnName = ISSUE_LATITUDE)
     private Double mLatitude;
@@ -41,6 +38,30 @@ public class Issue implements Serializable {
     @DatabaseField(columnName = ISSUE_DETAILS)
     private String mDetails;
 
+
+    /**
+     * Constructeur vide pour l'orm
+     */
+    public Issue() {
+
+    }
+
+    /**
+     * Constructeur avec tous les attributs nécessaires (donc sans l'id)
+     * @param sType, le type provenant de l'énum
+     * @param sLatitude, la latitude
+     * @param sLongitude, la longitude
+     * @param sAdresse, l'adresse
+     * @param sDetails, les détails
+     */
+    public Issue(TypeEnum sType, Double sLatitude, Double sLongitude, String sAdresse, String sDetails) {
+        this.mType = sType;
+        this.mLatitude = sLatitude;
+        this.mLongitude = sLongitude;
+        this.mAdresse = sAdresse;
+        this.mDetails = sDetails;
+    }
+
     public Integer getmId() {
         return mId;
     }
@@ -49,11 +70,11 @@ public class Issue implements Serializable {
         this.mId = mId;
     }
 
-    public String getmType() {
+    public TypeEnum getmType() {
         return mType;
     }
 
-    public void setmType(String mType) {
+    public void setmType(TypeEnum mType) {
         this.mType = mType;
     }
 

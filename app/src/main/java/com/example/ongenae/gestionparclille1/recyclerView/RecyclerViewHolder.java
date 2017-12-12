@@ -26,9 +26,9 @@ public class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.
     public RecyclerViewHolder(View itemView, RecyclerViewClickListener clickListener) {
         super(itemView);
 
-        probleme = (TextView) itemView.findViewById(R.id.probleme);
-        lieu = (TextView) itemView.findViewById(R.id.lieu);
-        image = (ImageView) itemView.findViewById(R.id.img_problem);
+        probleme = itemView.findViewById(R.id.probleme);
+        lieu = itemView.findViewById(R.id.lieu);
+        image = itemView.findViewById(R.id.img_problem);
 
         itemView.setOnClickListener(this);
         this.clickListener = clickListener;
@@ -36,7 +36,7 @@ public class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.
 
     //Fonction pour remplir la cellule en fonction d'un Tweet
     public void bind(final Issue issue){
-        probleme.setText(issue.getmType());
+        probleme.setText(issue.getmType().toString());
         lieu.setText(issue.getmAdresse());
 
         // TODO ajouter l'image selon le type du problème

@@ -3,14 +3,56 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ongenae.gestionparclille1.MainActivity">
+    tools:context="com.example.ongenae.gestionparclille1.DetailsActivity">
 
-    <TextView style="@style/TexteTitre"
-              android:id="@+id/titre_details"
-              android:layout_height="wrap_content"
-              android:text="Problème"
-        />
+    <TextView
+        style="@style/TexteTitre"
+        android:id="@+id/titre_details1"
+        android:layout_height="wrap_content"
+        android:text="@string/type_details1"/>
 
+    <TextView
+        android:id="@+id/type_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        style="@style/TexteTitre"
+        android:id="@+id/titre_details2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/titre_details2"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/adresse_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ImageButton
+            android:id="@+id/open_map_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_explore_green_24dp"
+            android:onClick="open_map_onClick"/>
+
+    </LinearLayout>
+    <TextView
+        style="@style/TexteTitre"
+        android:id="@+id/titre_details3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/titre_details3"/>
+
+    <TextView
+        android:id="@+id/details_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 </LinearLayout>
