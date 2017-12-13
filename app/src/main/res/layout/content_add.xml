@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ongenae.gestionparclille1.DetailsActivity">
+
+    <TextView
+        style="@style/TexteTitre"
+        android:layout_height="wrap_content"
+        android:text="@string/type_details1"
+        android:labelFor="@id/type_add"/>
+
+    <Spinner
+        android:id="@+id/type_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        style="@style/TexteTitre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/titre_position"/>
+
+    <TextView
+        android:id="@+id/positiongps_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        style="@style/TexteTitre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/titre_details2"
+        android:labelFor="@id/adresse_add"/>
+
+    <EditText
+        android:id="@+id/adresse_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        style="@style/TexteTitre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/titre_details3"
+        android:labelFor="@id/details_add"/>
+
+    <EditText
+        android:id="@+id/details_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

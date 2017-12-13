@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ongenae.gestionparclille1.MainActivity">
+    tools:context="com.example.ongenae.gestionparclille1.AddIssueActivity">
 
-    <include layout="@layout/content_main"/>
+    <include layout="@layout/content_add"/>
 
     <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_ajout"
+        android:src="@drawable/ic_add_brown_84dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_add_brown_84dp"
-        android:layout_gravity="bottom|end"
-        android:onClick="go_to_add_issue"
-        android:layout_marginEnd="10dp"
+        android:layout_gravity="bottom|center"
         android:layout_marginBottom="10dp"
+        android:onClick="add_issue_on_click"
         />
 
 </android.support.design.widget.CoordinatorLayout>

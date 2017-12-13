@@ -1,9 +1,5 @@
 package com.example.ongenae.gestionparclille1;
 
-/**
- * Created by ongenae on 12/12/17.
- */
-
 public enum TypeEnum {
     CARVE_TREE("Arbre à tailler"),
     TO_CUT_TREE("Arbre à abattre"),

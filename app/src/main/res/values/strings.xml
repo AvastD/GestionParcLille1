@@ -3,4 +3,5 @@
     <string name="type_details1">Type</string>
     <string name="titre_details2">Adresse :</string>
     <string name="titre_details3">Détails</string>
+    <string name="titre_position">Position</string>
 </resources>

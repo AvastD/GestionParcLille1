@@ -6,10 +6,6 @@ import com.j256.ormlite.table.DatabaseTable;
 
 import java.io.Serializable;
 
-/**
- * Created by Avast on 07/12/2017.
- */
-
 @DatabaseTable(tableName="issues")
 public class Issue implements Serializable {
 
@@ -42,9 +38,7 @@ public class Issue implements Serializable {
     /**
      * Constructeur vide pour l'orm
      */
-    public Issue() {
-
-    }
+    public Issue() {}
 
     /**
      * Constructeur avec tous les attributs nécessaires (donc sans l'id)

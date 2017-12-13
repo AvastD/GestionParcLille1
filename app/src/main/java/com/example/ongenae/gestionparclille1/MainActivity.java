@@ -20,7 +20,6 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
-    private RecyclerViewAdapter mRecyclerViewAdapter;
     private List<Issue> mIssues;
     private DatabaseHelper mDbHelper = null;
     private RecyclerViewHolder.RecyclerViewClickListener itemClickListener = new RecyclerViewHolder.RecyclerViewClickListener() {
@@ -60,9 +59,9 @@ public class MainActivity extends AppCompatActivity {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        mRecyclerViewAdapter = new RecyclerViewAdapter(mIssues);
-        mRecyclerView.setAdapter(mRecyclerViewAdapter);
-        mRecyclerViewAdapter.setClickListener(itemClickListener);
+        RecyclerViewAdapter tRecyclerViewAdapter = new RecyclerViewAdapter(mIssues);
+        mRecyclerView.setAdapter(tRecyclerViewAdapter);
+        tRecyclerViewAdapter.setClickListener(itemClickListener);
 
     }
 
@@ -71,7 +70,8 @@ public class MainActivity extends AppCompatActivity {
      * @param view, le bouton ayant lancé la méthode
      */
     public void go_to_add_issue(View view) {
-        // lancer add_issue_activity
+        Intent intent = new Intent(getApplicationContext(), AddIssueActivity.class);
+        startActivity(intent);
     }
 
     private DatabaseHelper getHelper() {

@@ -10,9 +10,6 @@ import com.example.ongenae.gestionparclille1.database.Issue;
 
 import java.util.List;
 
-/**
- * Created by ongenae on 11/12/17.
- */
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder> {
 
     private List<Issue> list;

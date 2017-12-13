@@ -18,10 +18,6 @@ import com.j256.ormlite.android.apptools.OpenHelperManager;
 import java.sql.SQLException;
 import java.util.List;
 
-/**
- * Created by ongenae on 11/12/17.
- */
-
 public class DetailsActivity extends AppCompatActivity {
 
     private DatabaseHelper mDbHelper = null;
@@ -51,7 +47,7 @@ public class DetailsActivity extends AppCompatActivity {
 
     /**
      * Supprime le problème avec une alerte de confirmation
-     * @param view
+     * @param view, le bouton cliqué
      */
     public void remove_issue_on_click(View view) {
         if (view.getId() == R.id.btn_suppression) {

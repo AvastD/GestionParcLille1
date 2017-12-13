@@ -1,6 +1,5 @@
 package com.example.ongenae.gestionparclille1.recyclerView;
 
-import android.graphics.drawable.ColorDrawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
@@ -9,9 +8,6 @@ import android.widget.TextView;
 import com.example.ongenae.gestionparclille1.R;
 import com.example.ongenae.gestionparclille1.database.Issue;
 
-/**
- * Created by ongenae on 11/12/17.
- */
 public class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
     public interface RecyclerViewClickListener {
@@ -23,7 +19,7 @@ public class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.
     private RecyclerViewClickListener clickListener;
 
     //itemView est la vue correspondante à une cellule
-    public RecyclerViewHolder(View itemView, RecyclerViewClickListener clickListener) {
+    private RecyclerViewHolder(View itemView, RecyclerViewClickListener clickListener) {
         super(itemView);
 
         probleme = itemView.findViewById(R.id.probleme);
