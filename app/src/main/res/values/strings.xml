@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">GestionParcLille1</string>
+    <string name="app_name">Gestion Parc Lille1</string>
     <string name="type_details1">Type</string>
     <string name="titre_details2">Adresse :</string>
     <string name="titre_details3">Détails</string>
     <string name="titre_position">Position</string>
+    <string name="description_btn_map">Image d\'ouverture de map</string>
 </resources>

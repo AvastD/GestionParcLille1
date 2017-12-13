@@ -6,6 +6,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.ongenae.gestionparclille1.R;
+import com.example.ongenae.gestionparclille1.TypeEnum;
 import com.example.ongenae.gestionparclille1.database.Issue;
 
 public class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
@@ -19,7 +20,7 @@ public class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.
     private RecyclerViewClickListener clickListener;
 
     //itemView est la vue correspondante à une cellule
-    private RecyclerViewHolder(View itemView, RecyclerViewClickListener clickListener) {
+    RecyclerViewHolder(View itemView, RecyclerViewClickListener clickListener) {
         super(itemView);
 
         probleme = itemView.findViewById(R.id.probleme);
@@ -32,11 +33,29 @@ public class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.
 
     //Fonction pour remplir la cellule en fonction d'un Tweet
     public void bind(final Issue issue){
-        probleme.setText(issue.getmType().toString());
+        TypeEnum type = issue.getmType();
+        probleme.setText(type.toString());
         lieu.setText(issue.getmAdresse());
 
-        // TODO ajouter l'image selon le type du problème
-        image.setImageResource(R.drawable.ic_launcher_background);
+        switch(type) {
+            case CARVE_TREE:
+                image.setImageResource(R.drawable.branche_arbre_r);
+                break;
+            case TO_CUT_TREE:
+                image.setImageResource(R.drawable.arbre_r);
+                break;
+            case RUBBISH:
+                image.setImageResource(R.drawable.dechets_r);
+                break;
+            case CARVE_HEDGE:
+                image.setImageResource(R.drawable.haie_a_tailler_r);
+                break;
+            case WEED:
+                image.setImageResource(R.drawable.mauvaise_herbe_r);
+                break;
+            case OTHER:
+                image.setImageResource(R.drawable.question_mark);
+        }
     }
 
     @Override

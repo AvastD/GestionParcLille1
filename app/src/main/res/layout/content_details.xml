@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -11,48 +10,38 @@
     <TextView
         style="@style/TexteTitre"
         android:id="@+id/titre_details1"
-        android:layout_height="wrap_content"
         android:text="@string/type_details1"/>
 
     <TextView
+        style="@style/Content"
         android:id="@+id/type_details"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        />
 
     <TextView
         style="@style/TexteTitre"
         android:id="@+id/titre_details2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:text="@string/titre_details2"/>
 
-    <LinearLayout
+    <TextView
+        style="@style/Content"
+        android:id="@+id/adresse_details"
+        />
+
+    <ImageButton
+        android:id="@+id/open_map_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:src="@drawable/ic_explore_green_24dp"
+        android:onClick="open_map_onClick"
+        android:layout_gravity="center"
+        android:contentDescription="@string/description_btn_map"/>
 
-        <TextView
-            android:id="@+id/adresse_details"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <ImageButton
-            android:id="@+id/open_map_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_explore_green_24dp"
-            android:onClick="open_map_onClick"/>
-
-    </LinearLayout>
     <TextView
         style="@style/TexteTitre"
         android:id="@+id/titre_details3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:text="@string/titre_details3"/>
 
     <TextView
-        android:id="@+id/details_details"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        style="@style/Content"
+        android:id="@+id/details_details"/>
 </LinearLayout>
